@@ -34,6 +34,10 @@ extension HomeViewController {
         viewModel.isLoading = { [weak self] isLoading in
             guard let self = self else { return }
             isLoading ? self.startLoading() : self.stopLoading()
+            
+            if !isLoading {
+                self.viewModel.people.isEmpty ? self.tableView.setEmptyMessage("No one here :)") : self.tableView.restore()
+            }
         }
         
         viewModel.reloadTableView = { [weak self] in
@@ -43,7 +47,9 @@ extension HomeViewController {
         
         viewModel.presentError = { [weak self] error in
             guard let self = self else { return }
+            #if DEBUG
             print("Error Presenting: \(error.errorDescription)")
+            #endif
             self.presentAlert(
                 title: "Error!",
                 message: error.errorDescription,
@@ -73,6 +79,9 @@ extension HomeViewController {
 }
 // MARK: - UITableViewDataSource
 extension HomeViewController: UITableViewDataSource {
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return viewModel.people.count
     }
@@ -81,7 +90,7 @@ extension HomeViewController: UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: PersonTableViewCell.cellIdentifier, for: indexPath) as! PersonTableViewCell
         
         let person = viewModel.getPersonBy(indexPath)
-        cell.label.text = person.fullName
+        cell.label.text = "\(person.fullName) (\(person.id))"
         return cell
     }
 }

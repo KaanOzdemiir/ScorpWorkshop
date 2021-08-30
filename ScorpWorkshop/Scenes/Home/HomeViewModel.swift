@@ -58,9 +58,11 @@ class HomeViewModel: HomeViewModelProtocol {
     func getEliminatedPeople(people: [Person]) -> [Person] {
         var eliminatedPeople: [Person] = []
         people.forEach { person in
-            guard !eliminatedPeople.contains(where: { $0.id == person.id }) else { return }
+            guard people.contains(where: { $0.id == person.id }) else { return }
             eliminatedPeople.append(person)
+            #if DEBUG
             print("PERSON: \(person.id) - \(person.fullName)")
+            #endif
         }
         
         return eliminatedPeople

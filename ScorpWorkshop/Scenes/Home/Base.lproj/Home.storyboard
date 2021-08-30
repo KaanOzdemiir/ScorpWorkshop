@@ -35,13 +35,7 @@
                             <constraint firstItem="k3o-yG-OlC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="mmJ-Wo-PUn"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="pE0-4v-vAq">
-                        <barButtonItem key="rightBarButtonItem" systemItem="play" id="ZBQ-Wp-ITi">
-                            <connections>
-                                <action selector="fetchNext:" destination="BYZ-38-t0r" id="r9E-eK-Lzj"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" id="pE0-4v-vAq"/>
                     <connections>
                         <outlet property="tableView" destination="k3o-yG-OlC" id="TCJ-rX-gRH"/>
                     </connections>
