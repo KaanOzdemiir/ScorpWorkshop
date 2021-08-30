@@ -12,9 +12,12 @@
 		F71D37F426DCE7AF00640620 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F71D37F226DCE7AF00640620 /* Home.storyboard */; };
 		F71D37F626DCE7B000640620 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F71D37F526DCE7B000640620 /* Assets.xcassets */; };
 		F71D37F926DCE7B000640620 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F71D37F726DCE7B000640620 /* LaunchScreen.storyboard */; };
-		F71D380826DCEAC800640620 /* DataSource in Resources */ = {isa = PBXBuildFile; fileRef = F71D380726DCEAC700640620 /* DataSource */; };
 		F71D380D26DCEBCE00640620 /* PersonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F71D380B26DCEBCE00640620 /* PersonTableViewCell.swift */; };
 		F71D380E26DCEBCE00640620 /* PersonTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F71D380C26DCEBCE00640620 /* PersonTableViewCell.xib */; };
+		F71D381026DCEDE800640620 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F71D380F26DCEDE800640620 /* HomeViewModel.swift */; };
+		F71D381326DCEE9600640620 /* DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F71D381226DCEE9600640620 /* DataSource.swift */; };
+		F71D381A26DCF52900640620 /* Closures.swift in Sources */ = {isa = PBXBuildFile; fileRef = F71D381926DCF52900640620 /* Closures.swift */; };
+		F71D381D26DCFAF100640620 /* VC+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F71D381C26DCFAF100640620 /* VC+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,9 +28,12 @@
 		F71D37F526DCE7B000640620 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F71D37F826DCE7B000640620 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F71D37FA26DCE7B000640620 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F71D380726DCEAC700640620 /* DataSource */ = {isa = PBXFileReference; lastKnownFileType = folder; path = DataSource; sourceTree = "<group>"; };
 		F71D380B26DCEBCE00640620 /* PersonTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonTableViewCell.swift; sourceTree = "<group>"; };
 		F71D380C26DCEBCE00640620 /* PersonTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PersonTableViewCell.xib; sourceTree = "<group>"; };
+		F71D380F26DCEDE800640620 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		F71D381226DCEE9600640620 /* DataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataSource.swift; sourceTree = "<group>"; };
+		F71D381926DCF52900640620 /* Closures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Closures.swift; sourceTree = "<group>"; };
+		F71D381C26DCFAF100640620 /* VC+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "VC+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,12 +66,14 @@
 		F71D37EB26DCE7AF00640620 /* ScorpWorkshop */ = {
 			isa = PBXGroup;
 			children = (
+				F71D381B26DCFAE400640620 /* Helper */,
+				F71D381726DCF50D00640620 /* Utilities */,
 				F71D380926DCEBA700640620 /* UIComponents */,
 				F71D380226DCE80D00640620 /* AppDelegate */,
 				F71D380526DCE85B00640620 /* Configurations */,
 				F71D380326DCE83400640620 /* Scenes */,
-				F71D380726DCEAC700640620 /* DataSource */,
 				F71D380126DCE7FC00640620 /* Resources */,
+				F71D381126DCEE9600640620 /* DataProvider */,
 				F71D37F726DCE7B000640620 /* LaunchScreen.storyboard */,
 			);
 			path = ScorpWorkshop;
@@ -100,6 +108,7 @@
 			children = (
 				F71D37F226DCE7AF00640620 /* Home.storyboard */,
 				F71D37F026DCE7AF00640620 /* HomeViewController.swift */,
+				F71D380F26DCEDE800640620 /* HomeViewModel.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -127,6 +136,38 @@
 				F71D380C26DCEBCE00640620 /* PersonTableViewCell.xib */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		F71D381126DCEE9600640620 /* DataProvider */ = {
+			isa = PBXGroup;
+			children = (
+				F71D381226DCEE9600640620 /* DataSource.swift */,
+			);
+			path = DataProvider;
+			sourceTree = "<group>";
+		};
+		F71D381726DCF50D00640620 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				F71D381826DCF51800640620 /* Constants */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		F71D381826DCF51800640620 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				F71D381926DCF52900640620 /* Closures.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		F71D381B26DCFAE400640620 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				F71D381C26DCFAF100640620 /* VC+Extensions.swift */,
+			);
+			path = Helper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -188,7 +229,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				F71D37F926DCE7B000640620 /* LaunchScreen.storyboard in Resources */,
-				F71D380826DCEAC800640620 /* DataSource in Resources */,
 				F71D37F626DCE7B000640620 /* Assets.xcassets in Resources */,
 				F71D37F426DCE7AF00640620 /* Home.storyboard in Resources */,
 				F71D380E26DCEBCE00640620 /* PersonTableViewCell.xib in Resources */,
@@ -203,8 +243,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				F71D380D26DCEBCE00640620 /* PersonTableViewCell.swift in Sources */,
+				F71D381D26DCFAF100640620 /* VC+Extensions.swift in Sources */,
 				F71D37F126DCE7AF00640620 /* HomeViewController.swift in Sources */,
 				F71D37ED26DCE7AF00640620 /* AppDelegate.swift in Sources */,
+				F71D381326DCEE9600640620 /* DataSource.swift in Sources */,
+				F71D381026DCEDE800640620 /* HomeViewModel.swift in Sources */,
+				F71D381A26DCF52900640620 /* Closures.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
