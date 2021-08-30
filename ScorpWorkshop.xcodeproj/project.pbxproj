@@ -12,6 +12,9 @@
 		F71D37F426DCE7AF00640620 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F71D37F226DCE7AF00640620 /* Home.storyboard */; };
 		F71D37F626DCE7B000640620 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F71D37F526DCE7B000640620 /* Assets.xcassets */; };
 		F71D37F926DCE7B000640620 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F71D37F726DCE7B000640620 /* LaunchScreen.storyboard */; };
+		F71D380826DCEAC800640620 /* DataSource in Resources */ = {isa = PBXBuildFile; fileRef = F71D380726DCEAC700640620 /* DataSource */; };
+		F71D380D26DCEBCE00640620 /* PersonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F71D380B26DCEBCE00640620 /* PersonTableViewCell.swift */; };
+		F71D380E26DCEBCE00640620 /* PersonTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F71D380C26DCEBCE00640620 /* PersonTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +25,9 @@
 		F71D37F526DCE7B000640620 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F71D37F826DCE7B000640620 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F71D37FA26DCE7B000640620 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F71D380726DCEAC700640620 /* DataSource */ = {isa = PBXFileReference; lastKnownFileType = folder; path = DataSource; sourceTree = "<group>"; };
+		F71D380B26DCEBCE00640620 /* PersonTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonTableViewCell.swift; sourceTree = "<group>"; };
+		F71D380C26DCEBCE00640620 /* PersonTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PersonTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,9 +60,12 @@
 		F71D37EB26DCE7AF00640620 /* ScorpWorkshop */ = {
 			isa = PBXGroup;
 			children = (
+				F71D380926DCEBA700640620 /* UIComponents */,
 				F71D380226DCE80D00640620 /* AppDelegate */,
 				F71D380526DCE85B00640620 /* Configurations */,
 				F71D380326DCE83400640620 /* Scenes */,
+				F71D380726DCEAC700640620 /* DataSource */,
+				F71D380126DCE7FC00640620 /* Resources */,
 				F71D37F726DCE7B000640620 /* LaunchScreen.storyboard */,
 			);
 			path = ScorpWorkshop;
@@ -65,7 +74,6 @@
 		F71D380126DCE7FC00640620 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				F71D380426DCE84300640620 /* Home */,
 				F71D37F526DCE7B000640620 /* Assets.xcassets */,
 			);
 			path = Resources;
@@ -82,7 +90,7 @@
 		F71D380326DCE83400640620 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				F71D380126DCE7FC00640620 /* Resources */,
+				F71D380426DCE84300640620 /* Home */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -102,6 +110,23 @@
 				F71D37FA26DCE7B000640620 /* Info.plist */,
 			);
 			path = Configurations;
+			sourceTree = "<group>";
+		};
+		F71D380926DCEBA700640620 /* UIComponents */ = {
+			isa = PBXGroup;
+			children = (
+				F71D380A26DCEBB200640620 /* Cells */,
+			);
+			path = UIComponents;
+			sourceTree = "<group>";
+		};
+		F71D380A26DCEBB200640620 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				F71D380B26DCEBCE00640620 /* PersonTableViewCell.swift */,
+				F71D380C26DCEBCE00640620 /* PersonTableViewCell.xib */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -163,8 +188,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				F71D37F926DCE7B000640620 /* LaunchScreen.storyboard in Resources */,
+				F71D380826DCEAC800640620 /* DataSource in Resources */,
 				F71D37F626DCE7B000640620 /* Assets.xcassets in Resources */,
 				F71D37F426DCE7AF00640620 /* Home.storyboard in Resources */,
+				F71D380E26DCEBCE00640620 /* PersonTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -175,6 +202,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F71D380D26DCEBCE00640620 /* PersonTableViewCell.swift in Sources */,
 				F71D37F126DCE7AF00640620 /* HomeViewController.swift in Sources */,
 				F71D37ED26DCE7AF00640620 /* AppDelegate.swift in Sources */,
 			);
